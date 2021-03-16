@@ -3,7 +3,7 @@ const initializeMongooseConnection = require("./db/index");
 /* Replace undefined with Require of your note entity*/
 const noteModel = undefined;
 /* Replace undefined with Require of your user entity*/
-const userModel = undefined;
+const userModel = require("./api/v1/user/user.entity");
 
 module.exports = {
   initializeMongooseConnection,

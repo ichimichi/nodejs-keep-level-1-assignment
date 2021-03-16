@@ -3,5 +3,6 @@ const { appConfig } = require("../config/appConfig");
 const app = require("./../app");
 
 app.listen(appConfig.port, () => {
+  // eslint-disable-next-line no-console
   console.log(`server listening on ${appConfig.port}`);
 });
