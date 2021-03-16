@@ -1,1 +1,7 @@
 // write your server code here
+const { appConfig } = require("../config/appConfig");
+const app = require("./../app");
+
+app.listen(appConfig.port, () => {
+  console.log(`server listening on ${appConfig.port}`);
+});
