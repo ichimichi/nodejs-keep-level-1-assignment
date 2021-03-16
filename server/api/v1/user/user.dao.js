@@ -1,25 +1,6 @@
 const userModel = require("./user.entity");
 const bcrypt = require("bcryptjs");
 
-const getUser = (id) => {
-  return new Promise((resolve, reject) => {
-    userModel.findById(id, (error, user) => {
-      if (error) {
-        reject({
-          message: "Internal Server Error",
-          status: 500,
-        });
-      } else {
-        resolve({
-          message: "Successfully retrieved user",
-          user: user,
-          status: 200,
-        });
-      }
-    });
-  });
-};
-
 const addUser = (user) => {
   return new Promise((resolve, reject) => {
     let newUser = new userModel();
@@ -76,7 +57,6 @@ const loginUser = (user) => {
 };
 
 module.exports = {
-  getUser,
   addUser,
   loginUser,
 };
